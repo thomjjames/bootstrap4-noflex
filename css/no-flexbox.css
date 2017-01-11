@@ -1,0 +1,232 @@
+/*******************************************************
+ *
+ * Custom theme code styles
+ * Written by Themelize.me (http://themelize.me)
+ *
+ * Drop in file to remove Bootstrap 4 flexbox functionality
+ * 
+ *******************************************************/
+.media {
+  display: block;
+}
+
+.d-flex {
+  display: block !important;
+}
+
+.d-inline-flex {
+  display: inline-block !important;
+}
+
+@media (min-width: 576px) {
+  .d-sm-flex {
+    display: block !important;
+  }
+
+  .d-sm-inline-flex {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 768px) {
+  .d-md-flex {
+    display: block !important;
+  }
+
+  .d-md-inline-flex {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 992px) {
+  .d-lg-flex {
+    display: block !important;
+  }
+
+  .d-lg-inline-flex {
+    display: inline-block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .d-xl-flex {
+    display: block !important;
+  }
+
+  .d-xl-inline-flex {
+    display: inline-block !important;
+  }
+}
+.navbar,
+.navbar-nav {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .navbar-toggleable > .container {
+    display: block;
+  }
+  .navbar-toggleable .navbar-collapse {
+    display: block !important;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-toggleable-sm > .container {
+    display: block;
+  }
+  .navbar-toggleable-sm .navbar-collapse {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-toggleable-md > .container {
+    display: block;
+  }
+  .navbar-toggleable-md .navbar-collapse {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-toggleable-lg > .container {
+    display: block;
+  }
+  .navbar-toggleable-lg .navbar-collapse {
+    display: block !important;
+  }
+}
+.navbar-toggleable-xl > .container {
+  display: block;
+}
+.navbar-toggleable-xl .navbar-collapse {
+  display: block !important;
+}
+
+.card {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .card-deck,
+  .card-group {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .card-deck .card,
+  .card-group .card {
+    display: table-cell;
+    margin-bottom: 0;
+    vertical-align: top;
+  }
+}
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-indicators,
+.carousel-control-prev,
+.carousel-control-next {
+  display: block;
+}
+
+.modal-content,
+.modal-header,
+.modal-header {
+  display: block;
+}
+
+.nav {
+  display: block;
+}
+
+.nav-link {
+  display: inline-block;
+}
+
+.nav-inline .nav-item {
+  display: inline-block;
+}
+
+.nav-tabs::after,
+.nav-pill::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.nav-tabs .nav-item,
+.nav-pill .nav-item {
+  float: left;
+}
+
+.btn-group,
+.btn-group-vertical {
+  display: inline-block;
+}
+
+.btn-toolbar {
+  margin-left: -0.5rem;
+}
+.btn-toolbar::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.btn-toolbar .btn-group,
+.btn-toolbar .input-group {
+  float: left;
+}
+.btn-toolbar > .btn,
+.btn-toolbar > .btn-group,
+.btn-toolbar > .input-group {
+  margin-left: 0.5rem;
+}
+
+.progress {
+  display: block;
+}
+
+.form-inline {
+  display: block;
+}
+@media (min-width: 576px) {
+  .form-inline label,
+  .form-inline .form-group,
+  .form-inline .form-check,
+  .form-inline .custom-control {
+    display: inline-block;
+  }
+}
+
+.input-group {
+  display: table;
+}
+.input-group .form-control {
+  float: left;
+  width: 100%;
+}
+
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+  display: table-cell;
+}
+
+.input-group-addon,
+.input-group-btn {
+  width: 1%;
+}
+
+.list-group,
+.list-group-item {
+  display: block;
+}
+
+.pagination {
+  display: block;
+}
+
+.custom-control {
+  display: inline-block;
+}
+
+.custom-controls-stacked {
+  display: block;
+}
+
+/*# sourceMappingURL=no-flexbox.css.map */

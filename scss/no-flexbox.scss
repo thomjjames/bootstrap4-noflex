@@ -1,0 +1,194 @@
+
+/*******************************************************
+ *
+ * Custom theme code styles
+ * Written by Themelize.me (http://themelize.me)
+ *
+ * Drop in file to remove Bootstrap 4 flexbox functionality
+ * 
+ *******************************************************/
+// Bootstrap resources
+// ------------------------------
+@import "../plugins/bootstrap/scss/variables";
+@import "../plugins/bootstrap/scss/mixins";
+@import "mixins";
+
+
+// Media
+.media {
+  display: block;
+}
+
+// Utilities
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .d#{$infix}-flex         { display: block !important; }
+    .d#{$infix}-inline-flex  { display: inline-block !important; }
+  }
+}
+
+// Navbar
+.navbar,
+.navbar-nav {
+  display: block;
+}
+.navbar-toggleable {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        > .container {
+          display: block;
+        }
+        .navbar-collapse {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
+// Card
+.card {
+  display: block;
+}
+@include media-breakpoint-up(sm) {
+  .card-deck,
+  .card-group {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    .card {
+      display: table-cell;
+      margin-bottom: 0; // Margin balancing
+      vertical-align: top;
+    }
+  }
+}
+
+// Carousel
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-indicators,
+.carousel-control-prev,
+.carousel-control-next {
+  display: block; 
+}
+
+// Modal
+.modal-content,
+.modal-header,
+.modal-header {
+  display: block; 
+}
+
+// Nav
+.nav {
+  display: block; 
+}
+.nav-link {
+  display: inline-block;
+}
+.nav-inline {
+  .nav-item {
+    display: inline-block;
+  }
+}
+.nav-tabs,
+.nav-pill {
+  @include clearfix();
+  
+  .nav-item {
+    float: left;
+  }
+}
+.nav-fill {
+  // @todo 
+}
+.nav-justified {
+  // @todo 
+}
+
+// Button groups, @file: scss/_btn_groups.scss 
+.btn-group,
+.btn-group-vertical {
+  display: inline-block;
+}
+.btn-toolbar {
+  margin-left: -$btn-toolbar-margin; // Offset the first child's margin
+  @include clearfix();
+
+  .btn-group,
+  .input-group {
+    float: left;
+  }
+
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: $btn-toolbar-margin;
+  }
+}
+
+// Progress bars, @file: scss/_progress.scss 
+.progress {
+  display: block;
+}
+
+// Forms, @file: scss/_forms.scss
+.form-inline {
+  display: block;
+
+  // Kick in the inline
+  @include media-breakpoint-up(sm) {
+    label,
+    .form-group,
+    .form-check,
+    .custom-control {
+      display: inline-block;
+    }
+  }
+}
+
+// Input groups, @file: scss/_input-group.scss
+.input-group {
+  display: table;
+  
+  .form-control {
+    float: left;
+    width: 100%;
+  }
+}
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+  display: table-cell;  
+}
+.input-group-addon,
+.input-group-btn {
+  width: 1%;
+}
+
+// List group, @file: scss/_list-group.scss
+.list-group,
+.list-group-item {
+  display: block;
+}
+
+// Pagniation, @file: scss/_pagination.scss
+.pagination {
+  display: block;
+}
+
+// Custom forms, @file: scss/_custom-forms.scss
+.custom-control {
+  display: inline-block;
+}
+.custom-controls-stacked {
+  display: block;
+}
