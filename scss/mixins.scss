@@ -89,28 +89,16 @@
 // Grid framework
 // ------------------------------
 @mixin make-grid-columns($columns: $grid-columns, $gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
-  // Common properties for all breakpoints
-  %grid-column {
-    position: relative;
-    // Prevent columns from collapsing when empty
-    min-height: 1px;
-    @include make-gutters($gutters);
+  // col-1|2|3|etc 
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      @include make-col($i, $columns);
+    }    
   }
 
   $breakpoint-counter: 0;
   @each $breakpoint in map-keys($breakpoints) {
     $breakpoint-counter: ($breakpoint-counter + 1);
-
-    // Allow columns to stretch full width below their breakpoints
-    .col-#{$breakpoint} {
-      @extend %grid-column;
-    }
-
-    @for $i from 1 through $columns {
-      .col-#{$breakpoint}-#{$i} {
-        @extend %grid-column;
-      }
-    }
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       .col#{$breakpoint} {
